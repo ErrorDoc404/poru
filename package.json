@@ -1,0 +1,31 @@
+{
+  "name": "poru",
+  "version": "1.0.0",
+  "description": "Discord music bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErrorDoc404/poru.git"
+  },
+  "keywords": [
+    "Music"
+  ],
+  "author": "ErrorDoc404",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErrorDoc404/poru/issues"
+  },
+  "homepage": "https://github.com/ErrorDoc404/poru#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.3.1",
+    "mongoose": "^8.0.3",
+    "poru": "^4.5.0",
+    "poru-applemusic": "^1.2.0",
+    "poru-spotify": "^2.0.2"
+  }
+}

@@ -1,0 +1,33 @@
+version: "3"
+
+services:
+  discord-musicbot:
+    build: .
+    container_name: discordbot
+    command: npm run watch
+    restart: always
+    environment:
+      PORT: 6969:6969
+    networks:
+      - lavamusicserver
+    depends_on:
+      - lavalink
+    volumes:
+      - ./config.js:/usr/src/config.js:ro
+    ports:
+      - "6969:6969"
+
+  lavalink:
+    image: fredboat/lavalink
+    container_name: lavalink
+    environment:
+      PORT: 3000:3000
+    hostname: lavalink
+    restart: unless-stopped
+    networks:
+      - lavamusicserver
+    volumes:
+      - ./lavalink/application.yml:/opt/Lavalink/application.yml:ro
+
+networks:
+  lavamusicserver: ~
