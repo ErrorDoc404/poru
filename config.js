@@ -23,8 +23,8 @@ module.exports = {
     lavalink: [
         {
             id: "localhost",
-            host: 'localhost',
-            port: 2333,
+            host: '152.70.78.251',
+            port: 3000,
             password: 'kdlavalink',
             secure: false,
         }
@@ -45,7 +45,7 @@ module.exports = {
         clientSecret: process.env.Spotify_ClientSecret || "", //Spotify Client Secret
     },
 
-    handlers: ['events', 'nodes', 'buttons'],
+    handlers: ['events', 'nodes', 'buttons', 'commands'],
 
     github: {
         repoOwner: "ErrorDoc404",

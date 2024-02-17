@@ -68,6 +68,7 @@ class MusicBot extends Client {
         this.logger = logger;
 
         this.config.handlers.forEach((handler) => {
+            console.log(handler)
             require(`./handlers/${handler}`)(client);
         });
 
